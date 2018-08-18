@@ -20,7 +20,7 @@ Back-end:
   <li>Uses JWT to authorize HTTP requests that requires security. The token is derived from an APP KEY defined in the server plus the user's Identity Id</li>
   <li>All Users and Games are saved on MS SQL DB to persist the data</li>
   <li>Public message board where users can post topics and comments. All posts are saved using Entity Framework Core.</li>
-  <li>Mini Games: Higher/Lower and Get Higher</li>
+  <li>Mini Games: High/Low and Higher</li>
   <li>SignalR is implemented to support real-time updates on board posts and comments. All users connected to the board receives update in real-time</li>
 </ul>
 
