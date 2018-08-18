@@ -1,0 +1,62 @@
+<ion-header>
+
+  <ion-navbar>
+      <ion-title>{{this._boardTitle}}</ion-title>
+  
+      <ion-buttons left>
+        <button ion-button color="light" (click)="OnDismiss()">
+          <ion-icon name="arrow-back" class="menu-icon-normal"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="user-content">
+  <ion-card *ngFor="let feed of this._feeds">
+    <ion-grid class="no-padding">
+      
+      <ion-row class="no-padding">
+        <ion-col class="no-padding">
+          <ion-item color="light-fg">
+            <ion-icon name="create" item-right class="profile-icon" *ngIf="feed.acctId == this._userProfile.acctId" (click)="this.OnEditFeed(feed.id, feed.content)"></ion-icon>
+            <ion-icon name="trash" item-right class="profile-icon" *ngIf="feed.acctId == this._userProfile.acctId" (click)="this.OnFeedDelete(feed.id)"></ion-icon>
+            <ion-card-content class="no-padding">
+              <div text-left>
+                <p class="item-content">{{feed.displayName}}</p><br>
+                <span>{{feed.timeStamp | amFromUnix | amTimeAgo}}</span>
+              </div>
+            </ion-card-content>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="no-padding">
+        <ion-col class="no-padding">
+          <ion-card-content class="no-padding">
+            <p [innerHTML]="feed.content | linky"></p>
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  
+</ion-content>
+<ion-footer>
+  <div align="left">
+    <ion-list>
+      <ion-item class="padding-top">
+        <ion-label floating color="dark-semi" class="padding-10">Type your comment</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="_formData.content" (keypress)="OnKeyPressed($event.keyCode)"></ion-input>
+      </ion-item>
+      <div align="center" class="padding-10">
+          <button ion-button class="buttonBlue" *ngIf="this._formData.id != 0" (click)="this.OnFeedUpdate()">UPDATE</button>
+          <button ion-button class="buttonRed" *ngIf="this._formData.id != 0" (click)="this.OnNewFeed()">CANCEL</button>
+          <button ion-button class="buttonOrange" *ngIf="this._formData.id != 0" (click)="this.OnNewFeed()">NEW</button>
+          <button ion-button class="buttonOrange" *ngIf="this._formData.id == 0" (click)="this.OnFeedCreate()">SEND</button>
+      </div>
+    </ion-list>
+  </div>
+</ion-footer>

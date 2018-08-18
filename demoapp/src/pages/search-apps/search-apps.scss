@@ -1,0 +1,44 @@
+page-search-apps {
+    .app-listing {
+        ion-item-divider{
+            margin-top: 0px;
+            min-height: 5px!important;
+        }
+
+        .item-icon {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            margin: 10px;
+            height: 72px;
+            width: 72px;
+        }
+        
+        .item-title {
+            color: color($colors, dark-semi);
+            font-size: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .item-content {
+            color: color($colors, dark-semi-bg);
+            font-size: 14px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .item-content2 {
+            color: color($colors, light-semi);
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .menu-icon {
+            font-size: 36px !important;
+            padding: 5px;
+            width: 40px;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+page-user-account {
+
+    .user-account {
+        
+        ion-card {
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        ion-card-content {
+            background: color($colors, light-fg);
+        }
+
+        ion-card-content p {
+            color: color($colors, light);
+            font-size: 1.75em;
+        }
+
+        ion-badge{
+            height: 30px;
+            font-size: 1.25em;
+        }        
+
+        .avatar-panel {
+            
+            margin-top: 10px;
+
+            .panel-title {
+                font-size: 2.5em;
+                font-weight: bold;
+                color: color($colors, gradient-lblue-bg);
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .profile-avatar{
+                height: 100px;
+                width: 100px;
+                margin: auto;
+            }
+        }
+
+        .profile-content {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: color($colors, gradient-lblue-bg);
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .item-content {
+            font-size: 1.0em;
+            color: color($colors, dark);
+            padding-left: 20px;
+        }
+
+        .profile-icon {
+            color: color($colors, gradient-lblue-fg);
+            font-size: 42px !important;
+            text-align: center;
+            width: 50px;
+        }
+
+        .menu-icon {
+            font-size: 36px !important;
+            padding: 5px;
+            width: 40px;
+        }
+    }
+}

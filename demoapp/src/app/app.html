@@ -1,0 +1,85 @@
+<!-- <ion-nav [root]="rootPage"></ion-nav> -->
+
+<ion-split-pane [when]="this.ShouldShowSplitPane()">
+    <!--  The side menu  -->
+    <ion-menu [content]="content">
+        <ion-header class="menuHeader">
+            <ion-toolbar class="menuHeader">
+                <div align="center">
+                    <img src="assets/icon/omni-icon-256.png" class="menuLogo">
+                </div>
+                <div align="center">
+                    <img src="assets/imgs/omni-logo-256.png" class="textLogo">
+                </div>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-list>
+                <ion-item-group>
+                    <!-- <ion-item-divider color="light-semi-bg"></ion-item-divider> -->
+                    <!-- <ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('ACCOUNT')" item-start>
+                            <ion-icon name="arrow-forward" class="menu-icon" item-start></ion-icon>
+                            <ion-label>My Account</ion-label>
+                        </button>
+                    </ion-item> -->
+                    <ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('PROFILE')">MY ACCOUNT</button>
+                    </ion-item>
+                    <!--<ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('TOPICS')">MY TOPICS</button>
+                    </ion-item>
+                    <ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('FEEDS')">MY FEEDS</button>
+                    </ion-item>-->
+                    <ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('GAMES')">GAMES</button>
+                    </ion-item>
+                    <ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('BOARD')">BOARDS</button>
+                    </ion-item>
+                    <ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('LOGOUT')">LOGOUT</button>
+                    </ion-item>
+                </ion-item-group>
+
+                <ion-item-group>
+                    <ion-item-divider color="light-bg"></ion-item-divider>
+
+                    <ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('ABOUT')">ABOUT THE APP</button>
+                    </ion-item>
+                    <ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('CONTACT')">CONTACT ME</button>
+                    </ion-item>
+                    <!--<ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('FAQ')">FAQ</button>
+                    </ion-item>-->
+                    <ion-item class="no-padding"><!--<ion-item no-lines class="no-padding"> -->
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('TERMS')">TERMS OF SERVICE</button>
+                    </ion-item>
+                    <ion-item class="no-padding">
+                        <button ion-button full clear class="buttonClear" (click)="OnMenuClick('PRIVACY')">PRIVACY POLICY</button>
+                    </ion-item>
+                </ion-item-group>
+            </ion-list>
+
+            <ion-footer class="menuFooter">
+                <ion-grid text-center>
+                    <ion-row>
+                        <ion-col>
+                        <strong>
+                        <span class="menu-footer">codetribelabs.weebly.com</span>
+                        <p>Eric Asinas &copy; 2018<br/>All rights reserved</p>
+                        </strong>
+                        </ion-col>
+                    </ion-row>    
+                </ion-grid>
+            </ion-footer>
+        </ion-content>
+    </ion-menu>
+      
+    <!-- The main content -->
+    <ion-nav [root]="rootPage" main #content></ion-nav>
+</ion-split-pane>

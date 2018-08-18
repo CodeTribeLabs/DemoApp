@@ -1,0 +1,82 @@
+<ion-header>
+  
+    <ion-navbar>
+      <button ion-button menuToggle color="light">
+        <ion-icon name="menu" class="iconBig"></ion-icon>
+      </button>
+      <ion-title>My Account</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="user-account">
+    
+    <div align="center" class="avatar-panel">
+      <ion-list>
+        <ion-item width-100>
+            <ion-avatar>
+                <img src="assets/imgs/avatar-default.png" class="profile-avatar">
+            </ion-avatar>
+        </ion-item>
+      </ion-list>
+      
+      <div class="panel-title">{{this._userProfile.firstName}} {{this._userProfile.lastName}}</div>
+    </div>
+    
+    <ion-card>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="call" class="profile-icon" item-start></ion-icon>
+            <ion-label class="profile-content">+63 {{this._userProfile.mobileNum}}</ion-label>  
+          </ion-item>
+  
+          <ion-item>
+            <ion-icon name="mail" class="profile-icon" item-start></ion-icon>
+            <ion-label class="profile-content">{{this._userProfile.email}}</ion-label>  
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-list padding>
+      
+      <ion-item>
+        <ion-icon name="help-buoy" class="profile-icon" item-start></ion-icon>
+        <ion-label class="item-content">CHIPS:</ion-label>
+        <ion-badge item-end>{{this._userProfile.gameCredits | number:'1.0-0'}}</ion-badge>
+        <button ion-button clear class="buttonClear" (click)="OnAction('CREDITS')" item-end>
+          <ion-icon name="add-circle" class="menu-icon"></ion-icon>
+        </button>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="cash" class="profile-icon" item-start></ion-icon>
+        <ion-label class="item-content">CREDITS:</ion-label>
+        <ion-badge item-end>{{this._userProfile.gameCurrency | number:'1.0-0'}}</ion-badge>
+        <button ion-button clear class="buttonClear" (click)="OnAction('TICKETS')" item-end>
+          <ion-icon name="add-circle" class="menu-icon"></ion-icon>
+        </button>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" class="profile-icon" item-start></ion-icon>
+        <ion-label class="item-content">MY BOARDS:</ion-label>  
+        <ion-badge item-end>{{this._userProfile.totalBoards | number:'1.0-0'}}</ion-badge>
+        <button ion-button clear class="buttonClear" (click)="OnAction('BOARD')" item-end>
+          <ion-icon name="arrow-dropright" class="menu-icon"></ion-icon>
+        </button>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="paper" class="profile-icon" item-start></ion-icon>
+        <ion-label class="item-content">MY COMMENTS:</ion-label>
+        <ion-badge item-end>{{this._userProfile.totalComments | number:'1.0-0'}}</ion-badge>
+        <button ion-button clear class="buttonClear" (click)="OnAction('BOARD')" item-end>
+          <ion-icon name="arrow-dropright" class="menu-icon"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  

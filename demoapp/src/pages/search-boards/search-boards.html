@@ -1,0 +1,36 @@
+<ion-header>
+  
+  <ion-navbar>
+    <ion-searchbar (ionInput)="SearchItems($event)"></ion-searchbar>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="boards-listing">
+  <ion-card *ngFor="let board of this._boardListingFiltered">
+    <ion-grid class="no-padding">
+      <ion-row class="no-padding">
+        <ion-col class="no-padding">
+          <ion-card-content>
+            <p [innerHTML]="board.title"></p>
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item color="light-fg">
+            <ion-icon name="chatbubbles" item-right class="profile-icon" (click)="this.OnBoardClick(board,'CHAT')"></ion-icon>
+            <ion-icon name="create" item-right class="profile-icon" *ngIf="board.acctId == this._acctId" (click)="this.OnBoardClick(board,'EDIT')"></ion-icon>
+            <ion-icon name="trash" item-right class="profile-icon" *ngIf="board.acctId == this._acctId" (click)="this.OnBoardClick(board,'DELETE')"></ion-icon>
+            <ion-card-content>
+              <div text-left>
+                <p class="item-content">By: {{board.displayName}}</p><br>
+                <span>{{board.timeStamp | amFromUnix | amTimeAgo}}</span>
+              </div>
+            </ion-card-content>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

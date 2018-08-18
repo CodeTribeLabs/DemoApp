@@ -1,0 +1,131 @@
+<ion-header>
+  <ion-navbar>
+    <!-- Menu Button -->
+    <button ion-button menuToggle color="light">
+      <ion-icon name="menu" class="iconBig"></ion-icon>
+    </button>
+
+    <!-- <ion-title></ion-title> -->
+    <div align="center">
+        <img src="assets/imgs/omni-logo-256.png" class="textLogo">
+    </div>
+    
+    <!-- Search Button -->
+    <ion-buttons right>
+      <button ion-button color="light" (click)="OnSearchClick()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="app-listing">
+  
+  <div>
+    <ion-segment [(ngModel)]="_appListing">
+      <ion-segment-button value="segment1"><b>ALL</b></ion-segment-button>
+      <ion-segment-button value="segment2"><b>POPULAR</b></ion-segment-button>
+      <ion-segment-button value="segment3"><b>NEW RELEASES</b></ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="_appListing">
+
+    <div *ngSwitchCase="'segment1'">
+      <ion-list *ngFor="let item of this._appListingAll">
+        <ion-item-group>
+          <ion-item-divider color="light-bg"></ion-item-divider>
+          <ion-item class="no-padding">
+            <button ion-button full clear class="buttonClearFull" (click)="OnAppClick(item.id)">
+              <ion-grid>
+                <ion-row justify-content-start>
+                  <ion-col align-self-center col-auto>
+                    <ion-thumbnail item-start class="item-icon">
+                      <img src="{{item.iconUrl}}">
+                    </ion-thumbnail>
+                  </ion-col>
+                  <ion-col align-self-center>
+                    <div text-left>
+                      <p class="item-title">{{ item.appName }}</p><br/>
+                      <p class="item-content">Genre: {{ item.genre }}</p><br/>
+                      <p class="item-content2">{{ item.shortDescription }}</p>
+                    </div>
+                  </ion-col>
+                  <ion-col align-self-center col-auto>
+                    <ion-icon name="arrow-dropright" class="menu-icon"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </button>
+          </ion-item>
+        </ion-item-group>
+      </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'segment2'">
+      <ion-list *ngFor="let item of this._appListingPopular">
+        <ion-item-group>
+          <ion-item-divider color="light-bg"></ion-item-divider>
+          <ion-item class="no-padding">
+            <button ion-button full clear class="buttonClearFull" (click)="OnAppClick(item.id)">
+              <ion-grid>
+                <ion-row justify-content-start>
+                  <ion-col align-self-center col-auto>
+                    <ion-thumbnail item-start class="item-icon">
+                      <img src="{{item.iconUrl}}">
+                    </ion-thumbnail>
+                  </ion-col>
+                  <ion-col align-self-center>
+                    <div text-left>
+                      <p class="item-title">{{ item.appName }}</p><br/>
+                      <p class="item-content">Genre: {{ item.genre }}</p><br/>
+                      <p class="item-content2">{{ item.shortDescription }}</p>
+                    </div>
+                  </ion-col>
+                  <ion-col align-self-center col-auto>
+                    <ion-icon name="arrow-dropright" class="menu-icon"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </button>
+          </ion-item>
+        </ion-item-group>
+      </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'segment3'">
+      <ion-list *ngFor="let item of this._appListingNew">
+        <ion-item-group>
+          <ion-item-divider color="light-bg"></ion-item-divider>
+          <ion-item class="no-padding">
+              <button ion-button full clear class="buttonClearFull" (click)="OnAppClick(item.id)">
+                <ion-grid>
+                  <ion-row justify-content-start>
+                    <ion-col align-self-center col-auto>
+                      <ion-thumbnail item-start class="item-icon">
+                        <img src="{{item.iconUrl}}">
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col align-self-center>
+                      <div text-left>
+                        <p class="item-title">{{ item.appName }}</p><br/>
+                        <p class="item-content">Genre: {{ item.genre }}</p><br/>
+                        <p class="item-content2">{{ item.shortDescription }}</p>
+                      </div>
+                    </ion-col>
+                    <ion-col align-self-center col-auto>
+                      <ion-icon name="arrow-dropright" class="menu-icon"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </button>
+          </ion-item>
+        </ion-item-group>
+      </ion-list>
+    </div>
+
+    
+
+  </div>
+</ion-content>

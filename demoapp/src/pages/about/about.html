@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About Omni Games
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="item-content">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <strong class="item-title-focus">Omni Games</strong> v0.1.0 (alpha)
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        Demo app developed for <b>Play N Go</b> to demonstrate my coding capabilities.
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <strong>Tech Stack</strong><br><br>
+        Front-end:<br>
+        <ul>
+          <li><strong>Ionic/Angular</strong></li>
+        </ul>
+        Back-end:<br>
+        <ul>
+          <li><strong>ASP.NET Core 2.1</strong></li>
+          <li><strong>MS SQL Server</strong></li>
+          <li><strong>SignalR</strong></li>
+        </ul>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <b>Features</b>
+        <ul>
+          <li>Uses Identity Framework to authenticate and manage user sign up and login</li>
+          <li>Uses JWT to authorize HTTP requests that requires security. The token is derived from an APP KEY defined in the server plus the user's Identity Id</li>
+          <li>All Users and Games are saved on MSSQL DB to persist the data</li>
+          <li>Public message board where users can post topics and comments. All posts are saved using Entity Framework Core.</li>
+          <li>Mini Games: Higher/Lower and Get Higher</li>
+          <li>SignalR is implemented to support real-time updates on board posts and comments. All users connected to the board receives update in real-time</li>
+        </ul>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <b>Partially implemented:</b>
+        <ul>
+          <li>Stored Procedures for MSSQL</li>
+          <li>Authentication of HTTP Request by sending JWT as part of the header</li>
+          <li>MD5 Hash algorithm using the JWT + API_KEY to authenticate if the HTTP request is not tampered upon transport</li>
+        </ul>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <b>Pending:</b>
+        <ul>
+          <li>Password encryption on MSSQL</li>
+          <li>Comments on the code are not extensive and only done on important parts to save time</li>
+        </ul>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

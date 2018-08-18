@@ -1,0 +1,132 @@
+page-app-play {
+    .app-play{
+        //background: linear-gradient(to top right, color($colors, gradient-fg), color($colors, gradient-bg));
+        background: color($colors, light-fg);
+        //color: color($colors, light);
+
+        /* ion-grid {
+            height: 100%;
+
+            //ion-row {
+            //  height: 25%;
+            //}
+        } */
+
+        ion-card {
+            position: relative;
+            text-align: center;
+            //margin-top: 20px;
+        }
+
+        ion-card-content {
+            background: color($colors, light-semi-bg);
+        }
+
+        ion-card-content p {
+            color: color($colors, dark-semi);
+            font-size: 1.5em;
+        }
+
+        ion-badge{
+            height: 30px;
+            font-size: 1.25em;
+        }
+
+        .win-text {
+            color: color($colors, btn-green);
+            font-size: 2.5em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        .lose-text {
+            color: color($colors, btn-red);
+            font-size: 2.5em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .winnings-text {
+            color: color($colors, btn-orange);
+            font-size: 2.5em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .action-text {
+            //color: color($colors, btn-red);
+            font-size: 2.5em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .chips-icon {
+        color: color($colors, btn-orange);
+        font-size: 42px !important;
+        text-align: right;
+        width: 250px;
+        vertical-align: middle;
+
+        span {
+            font-family: Arial, Helvetica, sans-serif !important;
+            display: inline-block;
+        }
+    }
+
+    .contentPanel{
+        margin-top: 150px;
+        //height: 200px;
+
+        /* p {
+            color: color($colors, light-semi);
+            font-weight: bold;
+            margin: 0px;
+        } */
+    }
+
+    .game1-card{
+        //height: 100px;
+        //width: 100px;
+        margin: auto;
+    }
+
+    .deck-card{
+        height: 182px;
+        width: 125px;
+        margin: auto;
+    }
+
+    .game2-card{
+        height: 122px;
+        width: 84px;
+        margin: 0px;
+    }
+
+    .game2-btn{
+        height: 122px;
+        width: 110px;
+        margin: 0px;
+    }
+
+    .game2-btn-focus{
+        background: color($colors, gradient-lblue-bg);
+        height: 122px;
+        width: 110px;
+        margin: 0px;
+    }
+
+    .app-content {
+        color: color($colors, dark-semi);
+        font-size: 1.5em;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .app-description {
+        color: color($colors, dark-semi-bg);
+        font-size: 1.10em;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

@@ -1,0 +1,54 @@
+<ion-content padding class="welcome">
+  <ion-grid text-center>
+    <ion-row>
+      <ion-col>
+        
+        <div class="logoPanel">
+          <div align="center">
+              <img src="assets/icon/omni-icon-256.png" class="mainLogo">
+          </div>
+          <div align="center">
+              <img src="assets/imgs/omni-logo-256.png">
+              <p>Demo app for Play N Go!</p>
+          </div>
+        </div>
+
+        <ion-list>
+        
+          <ion-item class="no-padding">
+            <ion-label floating color="light">User Name</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="_formData.username"></ion-input>
+          </ion-item>
+            
+          <ion-item class="no-padding">
+            <ion-label floating color="light">Password</ion-label>
+            <ion-input type="password" value="" [(ngModel)]="_formData.password"></ion-input>
+          </ion-item>
+            
+          <ion-item>
+            
+          </ion-item>
+
+        </ion-list>
+        
+        <button ion-button block class="buttonRed" (click)="OnLoginClick()">SIGN IN</button>
+
+        <button ion-button color="light" clear class="marginTop" (click)="OnForgotPasswordClick()">FORGOT YOUR PASSWORD?</button>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-footer>
+    <ion-grid text-center>
+      <ion-row>
+        <ion-col>
+            <p>DON'T HAVE AN ACCOUNT?</p>
+          <button ion-button block class="buttonBlue" (click)="OnRegisterClick()">REGISTER</button>
+        </ion-col>
+      </ion-row>    
+    </ion-grid>
+  </ion-footer>
+
+</ion-content>

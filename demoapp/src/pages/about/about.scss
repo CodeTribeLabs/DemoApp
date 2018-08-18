@@ -1,0 +1,16 @@
+page-about {
+    .item-content {
+        //color: color($colors, dark-semi);
+        font-size: 16px;
+        //display: inline-block;
+        //vertical-align: middle;
+        //padding:0px;
+    }
+
+    .item-title-focus {
+        color: color($colors, primary);
+        font-size: 20px !important;
+        //display: inline-block;
+        //vertical-align: middle;
+    }
+}

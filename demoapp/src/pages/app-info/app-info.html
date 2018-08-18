@@ -1,0 +1,64 @@
+<ion-header>
+  
+  <ion-navbar>
+    <ion-title>{{this._appInfo.appName}}</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+  
+  
+<ion-content padding class="app-info">
+
+  <ion-grid class="no-padding">
+    <ion-row>
+      <ion-col align-self-center col-auto>
+        <ion-thumbnail item-start class="app-icon">
+          <img src="{{this._appInfo.iconUrl}}">
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col align-self-center padding>
+        <div text-left>
+          <p class="app-content">
+            By: <b>Omni Games</b><br/><br/>
+            Genre: <b>{{ this._appInfo.genre }}</b><br/><br/>
+            Rating: <b>{{ this._appInfo.userRating }}</b>
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col align-self-start>
+        <p class="app-content">{{ this._appInfo.fullDescription }}</p>
+      </ion-col>
+    </ion-row>
+
+    <!-- Show if App is unavailable -->
+    <ion-row *ngIf="!_isAvailable; else AppAvailable">
+      <ion-col>
+        <div align="center">
+          <p class="app-content-focus">
+            <b>{{this._appInfo.appName}} is coming soon!</b><br/>
+            Sorry, this game is not yet available for playing.
+          </p>
+        </div>
+        <!-- <button ion-button block class="buttonGreen" (click)="OnActivateGame()">ACTIVATE GAME</button> -->
+      </ion-col>
+    </ion-row>
+
+    <!-- Show if App is Available -->
+    <ng-template #AppAvailable>
+      <ion-row justify-content-center align-items-center>
+        <ion-col align-self-center>
+          <div text-center>
+            <!-- <p class="app-title-focus"><b>TOPUP DEALS:</b></p> -->
+            <button ion-button block class="buttonGreen" (click)="OnPlayGame()">PLAY GAME</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ng-template>
+
+  </ion-grid>
+
+</ion-content>
+  

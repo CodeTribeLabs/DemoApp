@@ -1,0 +1,161 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+// Welcome Page
+// .welcome{
+//     background: linear-gradient(to top right, color($colors, gradient-fg), color($colors, gradient-bg));
+//     color: color($colors, light);
+// }
+
+// Toolbar Background
+.toolbar-background{
+    background: linear-gradient(to top right, color($colors, gradient-fg), color($colors, gradient-bg));
+}
+// Toolbar Title
+.toolbar-title{
+    //text-align: center;
+    color: color($colors, light);
+    font-size: 2em;
+}
+// Toolbar Icon
+ion-header ion-icon {
+    color: color($colors, light);
+    font-size: 42px;
+}
+
+// Tabbar Background
+.tabs-md .tabbar {
+    background: linear-gradient(to top right, color($colors, gradient-fg), color($colors, gradient-bg));
+    //background: linear-gradient(to top right, color($colors, gradient-lblue-bg), color($colors, gradient-lblue-fg));
+    padding: 5px;
+}
+// Tabbar Icon
+.tabs-md .tab-button-icon {
+    color: color($colors, light-semi);
+    font-size: 36px;
+}
+
+.menuHeader{
+    height: 100px;
+}
+
+.menuLogo{
+    height: 36px;
+    //text-align: center;
+}
+
+.menu-icon {
+    // color: color($colors, light);
+    font-size: 36px !important;
+    padding-left: 20px;
+}
+
+.menu-icon-normal {
+    color: color($colors, light);
+    font-size: 24px !important;
+    padding-left: 20px;
+}
+
+.textLogo{
+    padding-top:5px;
+    height: 42px;
+}
+
+.menuFooter{
+    background: linear-gradient(to top right, color($colors, gradient-lblue-bg), color($colors, gradient-lblue-fg));
+    color: color($colors, dark-semi);
+    padding: 0px;
+    margin: 0;
+    height: 80px;
+}
+
+ion-footer ion-grid{
+    //background: color($colors, light-semi-bg);
+    color: color($colors, light-semi);
+    padding: 0px;
+    margin: 0;
+    height: 80px;
+}
+
+.iconBig {
+    color: color($colors, light);
+    font-size: 42px !important;
+}
+
+.thumbnail-normal {
+    width: 64px !important;
+    height: 64px !important;
+}
+
+// Generic Buttons
+.buttonRed{
+    background: color($colors, btn-red);
+    height: 50px;
+    font-size: 1.5em;
+}
+.buttonBlue{
+    background: color($colors, btn-blue);
+    height: 50px;
+    font-size: 1.5em;
+}
+.buttonBlueBig{
+    background: color($colors, btn-blue);
+    height: 80px;
+    font-size: 1.5em;
+}
+.buttonOrange{
+    background: color($colors, btn-orange);
+    height: 50px;
+    font-size: 1.5em;
+}
+.buttonOrangeBig{
+    background: color($colors, btn-orange);
+    height: 80px;
+    font-size: 1.5em;
+}
+.buttonGreen{
+    background: color($colors, btn-green);
+    height: 50px;
+    font-size: 1.5em;
+}
+.buttonGreenBig{
+    background: color($colors, btn-green);
+    height: 80px;
+    font-size: 1.5em;
+}
+.buttonClear{
+    height: 50px !important;
+    font-size: 1.25em !important;
+}
+.buttonClearFull{
+    height: 100px !important;
+    font-size: 1.25em !important;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.item-inner {
+    padding-right: 0px!important;
+    margin: 0px !important;
+ }
+
+ .label {
+    margin: 0;
+    padding: 0px;
+ }

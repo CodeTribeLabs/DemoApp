@@ -1,0 +1,112 @@
+page-search-boards {
+    .boards-listing {
+        ion-grid {
+            height: 100%;
+        }
+
+        ion-item-divider{
+            margin-top: 0px;
+            min-height: 5px!important;
+        }
+
+        ion-card {
+            position: relative;
+            text-align: center;
+            margin-top: 10px;
+            background: color($colors, light-fg);
+        }
+
+        ion-card-content {
+            //background: linear-gradient(to top right, color($colors, gradient-green-fg), color($colors, gradient-green-bg));
+            //background: linear-gradient(to top right, color($colors, gradient-purple-bg), color($colors, gradient-purple-fg));
+            //background: linear-gradient(to top right, color($colors, gradient-lblue-fg), color($colors, gradient-lblue-bg));
+            background: color($colors, light-fg);
+            padding:0px;
+            //height: 160px;
+        }
+
+        ion-card-content p {
+            text-align: left;
+            color: color($colors, dark-semi);
+            font-size: 1.75em;
+            padding-left:10px;
+        }
+
+        ion-card-content span {
+            width: 100%;
+            text-align: left;
+            color: color($colors, dark-semi-bg);
+            padding-left:0px;
+        }
+
+        ion-badge{
+            height: 30px;
+            font-size: 1.25em;
+        }
+
+        .item-icon {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            margin: 10px;
+            height: 72px;
+            width: 72px;
+        }
+
+        .item-title {
+            color: color($colors, dark-semi);
+            font-size: 20px !important;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .item-title-focus {
+            color: color($colors, primary);
+            font-size: 20px !important;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .item-content {
+            color: color($colors, dark-semi);
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            padding:0px;
+        }
+
+        .item-content-light {
+            color: color($colors, dark-semi-bg);
+            font-size: 14px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .profile-icon {
+            color: color($colors, gradient-lblue-fg);
+            font-size: 36px !important;
+            text-align: center;
+            vertical-align: bottom;
+            width: 40px;
+        }
+
+        .padding-top {
+            padding-top: 5px;
+        }
+
+        .padding-10 {
+            padding: 10px;
+        }
+
+        .menu-icon {
+            font-size: 36px !important;
+            padding: 5px;
+            width: 20px !important;
+        }
+
+        .item-price {
+            width: 50px !important;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+<ion-header>
+  
+    <ion-navbar>
+      <button ion-button menuToggle color="light">
+        <ion-icon name="menu" class="iconBig"></ion-icon>
+      </button>
+      <ion-title>Public Boards</ion-title>
+
+      <!-- Search Button -->
+      <ion-buttons right>
+        <button ion-button color="light" (click)="OnSearchClick()">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content class="user-content">
+    <div>
+      <ion-segment [(ngModel)]="_boardListing">
+        <ion-segment-button value="segment1"><b>ALL</b> ({{this._boardsTotal | number:'1.0-0'}})</ion-segment-button>
+        <ion-segment-button value="segment2"><b>MY BOARDS</b> ({{this._myBoardsTotal | number:'1.0-0'}})</ion-segment-button>
+      </ion-segment>
+    </div>
+  
+    <div align="left">
+      <ion-list>
+        <ion-item class="padding-top">
+          <ion-label floating color="dark-semi" class="padding-10">Type your new board title</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="_formData.title"></ion-input>
+          
+        </ion-item>
+        <div align="right" class="padding-10">
+            <button ion-button class="buttonBlue" *ngIf="this._formData.id != 0" (click)="this.OnBoardUpdate()">UPDATE</button>
+            <button ion-button class="buttonRed" *ngIf="this._formData.id != 0" (click)="this.OnNewBoard()">CANCEL</button>
+            <button ion-button class="buttonOrange" *ngIf="this._formData.id != 0" (click)="this.OnNewBoard()">NEW</button>
+            <button ion-button class="buttonOrange" *ngIf="this._formData.id == 0" (click)="this.OnBoardCreate()">CREATE NEW</button>
+          </div>
+      </ion-list>
+      
+    </div>
+
+    <div [ngSwitch]="_boardListing">
+      <div *ngSwitchCase="'segment1'">
+        <ion-card *ngFor="let board of this._boards">
+          <ion-grid class="no-padding">
+            <ion-row class="no-padding">
+              <ion-col class="no-padding">
+                <ion-card-content>
+                  <p [innerHTML]="board.title"></p>
+                </ion-card-content>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item color="light-fg">
+                  <ion-icon name="chatbubbles" item-right class="profile-icon" (click)="this.OnBoardClick(board.id, board.title, board.ownerName)"></ion-icon>
+                  <ion-icon name="create" item-right class="profile-icon" *ngIf="board.acctId == this._userProfile.acctId" (click)="this.OnEditBoard(board.id, board.title)"></ion-icon>
+                  <ion-icon name="trash" item-right class="profile-icon" *ngIf="board.acctId == this._userProfile.acctId" (click)="this.OnBoardDelete(board.id)"></ion-icon>
+                  <ion-card-content>
+                    <div text-left>
+                      <p class="item-content">By: {{board.displayName}}</p><br>
+                      <span>{{board.timeStamp | amFromUnix | amTimeAgo}}</span>
+                    </div>
+                  </ion-card-content>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </div>
+
+    <div [ngSwitch]="_boardListing">
+      <div *ngSwitchCase="'segment2'">
+        <ion-card *ngFor="let board of this._myBoards">
+          <ion-grid class="no-padding">
+            <ion-row class="no-padding">
+              <ion-col class="no-padding">
+                <ion-card-content>
+                  <p [innerHTML]="board.title"></p>
+                </ion-card-content>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item color="light-fg">
+                  <ion-icon name="chatbubbles" item-right class="profile-icon" (click)="this.OnBoardClick(board.id, board.title, board.ownerName)"></ion-icon>
+                  <ion-icon name="create" item-right class="profile-icon" *ngIf="board.acctId == this._userProfile.acctId" (click)="this.OnEditBoard(board.id, board.title)"></ion-icon>
+                  <ion-icon name="trash" item-right class="profile-icon" *ngIf="board.acctId == this._userProfile.acctId" (click)="this.OnBoardDelete(board.id)"></ion-icon>
+                  <ion-card-content>
+                    <div text-left>
+                      <p class="item-content">By: {{board.displayName}}</p><br>
+                      <span>{{board.timeStamp | amFromUnix | amTimeAgo}}</span>
+                    </div>
+                  </ion-card-content>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </div>
+
+  </ion-content>
+  

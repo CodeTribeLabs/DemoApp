@@ -1,0 +1,155 @@
+<ion-header>
+  
+    <ion-navbar>
+      <ion-title>{{this._appName}}</ion-title>
+  
+      <ion-buttons left>
+        <button ion-button color="light" (click)="OnDismiss()">
+          <ion-icon name="arrow-back" class="menu-icon-normal"></ion-icon>
+        </button>
+      </ion-buttons>
+
+      <ion-buttons right>
+        <ion-icon right name="help-buoy" class="chips-icon"><span>{{this._gameCredits | number:'1.0-0'}}</span></ion-icon>
+      </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="app-play">
+    <ion-grid class="no-padding">
+      <ion-row>
+        <ion-col>
+          
+          <div align="center">
+            <div [ngSwitch]="_appId">
+              
+              <!-- GAME 1 : HIGH LOW -->
+              <div *ngSwitchCase="1">
+                
+                <div align="center" *ngIf="!_isPlaying">
+                  <p class="win-text" *ngIf="_winState == 'WIN'"><b>YOU WIN!</b></p>
+                  <p class="lose-text" *ngIf="_winState == 'LOSE'"><b>YOU LOSE!</b></p>
+                  <p class="lose-text" *ngIf="_winState == 'DRAW'"><b>DRAW!</b></p>
+                  <div align="center">
+                    <img src="assets/imgs/cards/{{this._gameResult}}.png" class="game1-card">  
+                  </div>
+                  <ion-card>
+                      <ion-card-content>
+                        <p><b>YOUR WINNINGS:</b></p>
+                        <p class="winnings-text"><b>{{this._winnings | number:'1.0-0'}} chips!</b></p>
+                      </ion-card-content>
+                    </ion-card>
+                </div>
+
+                <div align="center" *ngIf="_isPlaying">
+                  <p class="action-text">HIGH or LOW?</p>
+                  <div align="center">
+                    <img src="assets/imgs/cards/C0a.png" class="game1-card">
+                  </div>
+                  <div align="center" class="app-content">
+                      <p>
+                        8s or higher = <b>HIGH</b><br>
+                        6s or lower = <b>LOW</b><br>
+                        7s = <b>DRAW</b>
+                      </p>
+                  </div>
+                  <ion-card>
+                    <ion-card-content>
+                      <ion-list>
+                        <ion-item>
+                          <ion-label><p>Select your Bet:</p></ion-label>
+                          <ion-select [(ngModel)]="_betAmount" (ionChange)="OnBetSelect()">
+                            <ion-option *ngFor="let _betAmount of this.BetAmounts()">{{_betAmount}}</ion-option>
+                          </ion-select>
+                        </ion-item>
+                      </ion-list>
+                    </ion-card-content>
+                  </ion-card><br>
+                  
+                </div>
+
+                <div align="center">
+                  <div text-center *ngIf="!_isPlaying">
+                    <button ion-button block class="buttonGreenBig" (click)="InitGame()">PLAY AGAIN</button>
+                  </div>
+                  <div text-center *ngIf="_isPlaying">
+                    <button ion-button block class="buttonBlue" (click)="OnPlayGame('HIGH')">HIGH</button><br>
+                  </div>
+                  <div text-center *ngIf="_isPlaying">
+                    <button ion-button block class="buttonOrange" (click)="OnPlayGame('LOW')">LOW</button>
+                  </div>
+                </div>
+                
+              </div>
+
+              <!-- GAME 2 : HIGHER -->
+              <div *ngSwitchCase="2">
+                <div align="center" *ngIf="!_isPlaying">
+                  <p class="win-text" *ngIf="_winState == 'WIN'"><b>YOU WIN!</b></p>
+                  <p class="lose-text" *ngIf="_winState == 'LOSE'"><b>YOU LOSE!</b></p>
+                  <p class="lose-text" *ngIf="_winState == 'DRAW'"><b>DRAW!</b></p>
+                  <div align="center">
+                    <img src="assets/imgs/cards/{{'C' + this._deck}}.png" class="deck-card">  
+                  </div><br>
+                  <div align="center">
+                    <button ion-button clear class="game2-btn{{(this._action == '1') ? '-focus' : ''}}"><img src="assets/imgs/cards/{{'C' + this._card1}}.png" class="game2-card"></button>
+                    <button ion-button clear class="game2-btn{{(this._action == '2') ? '-focus' : ''}}"><img src="assets/imgs/cards/{{'C' + this._card2}}.png" class="game2-card"></button>
+                    <button ion-button clear class="game2-btn{{(this._action == '3') ? '-focus' : ''}}"><img src="assets/imgs/cards/{{'C' + this._card3}}.png" class="game2-card"></button>
+                    <button ion-button clear class="game2-btn{{(this._action == '4') ? '-focus' : ''}}"><img src="assets/imgs/cards/{{'C' + this._card4}}.png" class="game2-card"></button>
+                  </div><br>
+                  <ion-card>
+                    <ion-card-content>
+                      <p><b>YOUR WINNINGS:</b></p>
+                      <p class="winnings-text"><b>{{this._winnings | number:'1.0-0'}} chips!</b></p>
+                    </ion-card-content>
+                  </ion-card>
+                </div>
+
+                <div align="center" *ngIf="_isPlaying">
+                  <p class="action-text">Select a Higher card</p>
+                  <div align="center">
+                    <img src="assets/imgs/cards/{{'C' + this._deck}}.png" class="deck-card">
+                  </div><br>
+                  <div align="center">
+                    <button ion-button clear class="game2-btn" (click)="OnPlayGame('1')"><img src="assets/imgs/cards/C0b.png" class="game2-card"></button>
+                    <button ion-button clear class="game2-btn" (click)="OnPlayGame('2')"><img src="assets/imgs/cards/C0b.png" class="game2-card"></button>
+                    <button ion-button clear class="game2-btn" (click)="OnPlayGame('3')"><img src="assets/imgs/cards/C0b.png" class="game2-card"></button>
+                    <button ion-button clear class="game2-btn" (click)="OnPlayGame('4')"><img src="assets/imgs/cards/C0b.png" class="game2-card"></button>
+                  </div><br>
+
+                  <ion-card>
+                    <ion-card-content>
+                      <ion-list>
+                        <ion-item>
+                          <ion-label><p>Select your Bet:</p></ion-label>
+                          <ion-select [(ngModel)]="_betAmount" (ionChange)="OnBetSelect()">
+                            <ion-option *ngFor="let _betAmount of this.BetAmounts()">{{_betAmount}}</ion-option>
+                          </ion-select>
+                        </ion-item>
+                      </ion-list>
+                    </ion-card-content>
+                  </ion-card>
+                  
+                </div>
+
+                <div align="center"><br>
+                  <div text-center *ngIf="!_isPlaying">
+                    <button ion-button block class="buttonGreenBig" (click)="InitGame()">PLAY AGAIN</button>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+            </div>
+          </div>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  </ion-content>
+  

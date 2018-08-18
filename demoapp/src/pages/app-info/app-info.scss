@@ -1,0 +1,144 @@
+page-app-info {
+    
+        .app-info {
+            
+            /* ion-grid {
+                height: 100%;      
+            } */
+    
+            ion-item-divider{
+                margin-top: 0px;
+                min-height: 5px!important;
+            }
+    
+            ion-card {
+                position: relative;
+                text-align: center;
+                margin-top: 20px;
+            }
+    
+            ion-card-content {
+                //background: linear-gradient(to top right, color($colors, gradient-green-fg), color($colors, gradient-green-bg));
+                //background: linear-gradient(to top right, color($colors, gradient-purple-bg), color($colors, gradient-purple-fg));
+                //background: linear-gradient(to top right, color($colors, gradient-lblue-fg), color($colors, gradient-lblue-bg));
+                background: color($colors, light-fg);
+                //height: 160px;
+            }
+    
+            ion-card-content p {
+                color: color($colors, light);
+                font-size: 1.75em;
+            }
+    
+            ion-badge{
+                height: 30px;
+                font-size: 1.25em;
+            }        
+    
+            .avatar-panel {
+                
+                margin-top: 20px;
+    
+                .panel-title {
+                    font-size: 2.5em;
+                    font-weight: bold;
+                    color: color($colors, gradient-lblue-bg);
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+    
+                .profile-avatar{
+                    height: 150px;
+                    width: 150px;
+                    margin: auto;
+                }
+            }
+    
+            .profile-content {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: color($colors, gradient-lblue-bg);
+                padding-left: 20px;
+            }
+    
+            .item-content {
+                font-size: 1.0em;
+                color: color($colors, dark);
+                padding-left: 20px;
+            }
+    
+            .profile-icon {
+                color: color($colors, gradient-lblue-fg);
+                font-size: 42px !important;
+            }
+    
+            .menu-icon {
+                font-size: 36px !important;
+                padding: 5px;
+                width: 40px;
+            }
+    
+            .app-icon {
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                height: 160px;
+                width: 160px;
+            }
+    
+            .item-icon {
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                height: 100px;
+                width: 100px;
+            }
+    
+            .app-title {
+                color: color($colors, dark-semi);
+                font-size: 20px !important;
+                display: inline-block;
+                vertical-align: middle;
+            }
+    
+            .app-title-focus {
+                color: color($colors, primary);
+                font-size: 20px !important;
+                display: inline-block;
+                vertical-align: middle;
+            }
+    
+            .app-title-light {
+                color: color($colors, light-fg);
+                font-size: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+            }
+    
+            .app-content {
+                color: color($colors, dark-semi);
+                font-size: 16px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+    
+            .app-content-focus {
+                color: color($colors, primary);
+                font-size: 16px;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+            }
+    
+            .app-content-center {
+                color: color($colors, dark-semi);
+                font-size: 16px;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+            }
+        }
+    }
+    

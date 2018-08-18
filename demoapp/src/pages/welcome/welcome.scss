@@ -1,0 +1,48 @@
+page-welcome {
+    
+        .welcome{
+            background: linear-gradient(to top right, color($colors, gradient-fg), color($colors, gradient-bg));
+            color: color($colors, light);
+        }
+    
+        /* ion-grid {
+            height: 100%;
+          
+            //ion-row {
+            //  height: 25%;
+            //}
+        } */
+    
+        ion-footer{
+            padding: 0px 15px 0px 15px;
+            p {
+                margin: 0px;
+            }
+        }
+    
+        ion-input{
+            color: color($colors, light);
+            font-size: 1.5em;
+        }
+    
+        .marginTop{
+            margin-top: 50px;
+        }
+    
+        .logoPanel{
+            margin-top: 50px;
+            height: 200px;
+    
+            p {
+                color: color($colors, light-semi);
+                font-weight: bold;
+                margin: 0px;
+            }
+        }
+    
+        .mainLogo{
+            height: 72px;
+            //text-align: center;
+        }
+    }
+    
