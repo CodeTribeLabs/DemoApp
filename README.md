@@ -33,6 +33,7 @@ Back-end:
 
 <h2>Pending stuffs and Limitations</h2>
 <ul>
+  <li>HTTPS support is disabled on the server because CORS doesn't work properly on Firefox if it is enabled</li>
   <li>Password encryption on MS SQL</li>
   <li>Deleting of a board while users are connected will cause an error</li>
   <li>Comments on the code are not extensive and only done on important parts to save time</li>
