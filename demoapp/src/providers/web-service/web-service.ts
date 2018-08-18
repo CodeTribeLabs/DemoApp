@@ -3,10 +3,6 @@ import { Http, Headers} from '@angular/http';
 import { Md5 } from 'ts-md5/dist/md5';
 import 'rxjs/add/operator/map';
 
-//let _ApiUrl = "http://192.168.1.5/GameTopup/api/";
-//let _ApiUrl = "https://adhoc.os-gameserver.net/apps/game-topup/api/";
-//let _ApiKey = "4802fc7babb5bc89bbe283b5ed277803";
-
 let API_URL = "http://localhost:52162/"; // "https://localhost:44329/";
 let API_KEY = "PLAY_N_GO-API-KEY";
 let API_ROUTE = "api/";
