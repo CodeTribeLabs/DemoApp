@@ -54,13 +54,16 @@ Back-end:
         </ul>
       </li>
       <li>
-        <h4>Run the Server</h4>
+        <h4>Run the Local Server</h4>
         <ul>
-          <li></li>
-          <li></li>
+          <li>Open the solution <b>DemoApp/DemoServer/DemoServer.sln</b> using Visual Studio 2017</li>
+          <li>Open the file <b>DemoApp/DemoServer/DemoServer/appsettings.json</b></li>
+          <li>Update the node <b>LocalDbConnectionString</b> and enter the <b>Server Name</b> and <b>Database Name</b> of the DB instance that you have created on the previous step</li>
+          <li>By default, the server will run on port <b>52162</b>. If you want to change it, just modify the file <b>DemoApp/DemoServer/DemoServer/Properties/launchSettings.json</b>. If you do, please take note of the port number as you will need to configure this on the front-end app as well</li>
+          <li>Run the server locally by clicking the <b>IIS Express</b> green button below the menu bar</li>
         </ul>
       </li>
     </ol>
   </li>
-  <li><h3>Back End</h3></li>
+  <li><h3>Front End</h3></li>
 </ol>
