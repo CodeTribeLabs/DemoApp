@@ -1,0 +1,14 @@
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\bin\Debug\netcoreapp2.1\DemoServer.deps.json
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\bin\Debug\netcoreapp2.1\DemoServer.runtimeconfig.json
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\bin\Debug\netcoreapp2.1\DemoServer.runtimeconfig.dev.json
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\bin\Debug\netcoreapp2.1\DemoServer.dll
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\obj\Debug\netcoreapp2.1\DemoServer.csproj.CoreCompileInputs.cache
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\obj\Debug\netcoreapp2.1\DemoServer.RazorAssemblyInfo.cache
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\obj\Debug\netcoreapp2.1\DemoServer.RazorAssemblyInfo.cs
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\obj\Debug\netcoreapp2.1\DemoServer.AssemblyInfoInputs.cache
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\obj\Debug\netcoreapp2.1\DemoServer.AssemblyInfo.cs
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\obj\Debug\netcoreapp2.1\DemoServer.RazorTargetAssemblyInfo.cache
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\bin\Debug\netcoreapp2.1\DemoServer.pdb
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\obj\Debug\netcoreapp2.1\DemoServer.csprojAssemblyReference.cache
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\obj\Debug\netcoreapp2.1\DemoServer.dll
+H:\_FLDEV\ASP\DemoPNG\DemoServer\DemoServer\obj\Debug\netcoreapp2.1\DemoServer.pdb
