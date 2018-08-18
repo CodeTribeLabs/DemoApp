@@ -2,7 +2,7 @@
 
 <p><h2>Description:</h2>Demo app developed for Play N Go to demonstrate my coding capabilities.</p>
 
-<h2>Tech Stack:</h2>
+<h2>Tech Stack</h2>
 Front-end:
 <ul>
   <li><strong>Ionic/Angular</strong></li>
@@ -14,7 +14,7 @@ Back-end:
   <li><strong>SignalR</strong></li>
 </ul>
 
-<h2>Features:</h2>
+<h2>Features</h2>
 <ul>
   <li>Uses Identity Framework to authenticate and manage user sign up and login</li>
   <li>Uses JWT to authorize HTTP requests that requires security. The token is derived from an APP KEY defined in the server plus the user's Identity Id</li>
@@ -24,7 +24,7 @@ Back-end:
   <li>SignalR is implemented to support real-time updates on board posts and comments. All users connected to the board receives update in real-time</li>
 </ul>
 
-<h2>Partially implemented:</h2>
+<h2>Partially implemented</h2>
 <ul>
   <li>Stored Procedures for MS SQL</li>
   <li>Authentication of HTTP Request by sending JWT as part of the header</li>
@@ -61,7 +61,7 @@ Back-end:
           <li>Open the file <b>DemoApp/DemoServer/DemoServer/appsettings.json</b></li>
           <li>Update the node <b>LocalDbConnectionString</b> and enter the <b>Server Name</b> and <b>Database Name</b> of the DB instance that you have created on the previous step</li>
           <li>By default, the server will run on port <b>52162</b>. If you want to change it, just modify the file <b>DemoApp/DemoServer/DemoServer/Properties/launchSettings.json</b>. If you do, please take note of the port number as you will need to configure this on the front-end app as well</li>
-          <li>Run the server locally by clicking the <b>IIS Express</b> green button below the menu bar. When the server is ready, it will open your default browser and will navigate to the its default URL e.g. <b>http://localhost:52162/api/values</b>. Please note this down as you will need to configure it on the front-end app.</li>
+          <li>Run the server locally by clicking the <b>IIS Express</b> green button below the menu bar. When the server is ready, it will open your default browser and will navigate to the its default URL e.g. <b>http://localhost:52162/api/values</b>. Please note this down as you will need to configure it on the front-end app</li>
         </ul>
       </li>
     </ol>
@@ -97,7 +97,7 @@ Back-end:
           <li>To test the <b>SignalR</b> functionality, go to the <b>BOARDS</b> section and create a new board</li>
           <li>If you have another instance of the app opened on another browser, the newly created board will be listed there as well in real-time. If the board is updated or deleted by the owner, it will be updated on both clients</li>
           <li>Open a board and click the <b>Chat Bubble</b> icon. This will open the board and connected users can start chatting in real-time. Hyperlinks are supported on the chat messages</li>
-          <li>The rest of the application features like <b>MENU</b> and <b>SEARCH</b> are self-explanatory.</li>
+          <li>The rest of the application features like <b>MENU</b> and <b>SEARCH</b> are self-explanatory</li>
         </ul>
       </li>
     </ol>
