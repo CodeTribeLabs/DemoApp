@@ -60,7 +60,7 @@ Back-end:
           <li>Open the file <b>DemoApp/DemoServer/DemoServer/appsettings.json</b></li>
           <li>Update the node <b>LocalDbConnectionString</b> and enter the <b>Server Name</b> and <b>Database Name</b> of the DB instance that you have created on the previous step</li>
           <li>By default, the server will run on port <b>52162</b>. If you want to change it, just modify the file <b>DemoApp/DemoServer/DemoServer/Properties/launchSettings.json</b>. If you do, please take note of the port number as you will need to configure this on the front-end app as well</li>
-          <li>Run the server locally by clicking the <b>IIS Express</b> green button below the menu bar</li>
+          <li>Run the server locally by clicking the <b>IIS Express</b> green button below the menu bar. When the server is ready, it will open your default browser and will navigate to the its default URL e.g. <b>http://localhost:52162/api/values</b>. Please note this down as you will need to configure it on the front-end app.</li>
         </ul>
       </li>
     </ol>
