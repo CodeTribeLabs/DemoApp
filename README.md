@@ -31,9 +31,10 @@ Back-end:
   <li>MD5 Hash algorithm using the JWT + API_KEY to authenticate if the HTTP request is not tampered upon transport</li>
 </ul>
 
-<h2>Pending:</h2>
+<h2>Pending stuffs and Limitations</h2>
 <ul>
   <li>Password encryption on MS SQL</li>
+  <li>Deleting of a board while users are connected will cause an error</li>
   <li>Comments on the code are not extensive and only done on important parts to save time</li>
 </ul>
 
@@ -65,5 +66,44 @@ Back-end:
       </li>
     </ol>
   </li>
-  <li><h3>Front End</h3></li>
+  <li>
+    <h3>Front End</h3>
+    <ol>
+      <li>
+        <h4>Setup the Client</h4>
+        <ul>
+          <li>Open the project folder <b>DemoApp/demoapp/</b> using Visual Studio Code or your favorite Angular IDE</li>
+          <li>Open the file <b>DemoApp/demoapp/src/providers/web-service/web-service.ts</b></li>
+          <li>Go to <b>Line #6</b> and make sure that the endpoint URL and port number matches the <b>Local Server URL</b> (see Run the Local Server section for details) e.g. <b>http://localhost:52162/</b></li>
+        </ul>
+      </li>
+      <li>
+        <h4>Run the Client App</h4>
+        <ul>
+          <li>Open your shell program e.g. Power Shell or Git Bash and navigate to the client app folder <b>DemoApp/demoapp/</b></li>
+          <li><b>(OPTIONAL)</b> Install the <b>Ionic Framework</b> by typing <b>npm install -g ionic@latest cordova</b> on the command prompt and then just follow the instructions</li>
+          <li>Once Ionic Framework is installed, start the client app by typing <b>ionic serve</b> on the command prompt. This will launch your default browser and open the app as an Angular application</li>
+          <li><b>(OPTIONAL)</b> The app works on any screen resolution but the layout works best on a portrait orientation. Resize your browser to simulate a mobile device or open the developer console on your browser</li>
+          <li><b>(OPTIONAL)</b> Open a different browser and navigate to the same <b>Client App URL</b>. This will enable you to have two instances of the app and login as two different users</li>
+        </ul>
+      </li>
+      <li>
+        <h4>Test the Client App</h4>
+        <ul>
+          <li>Click <b>REGISTER</b> on the welcome screen and fill up the credentials</li>
+          <li>Once logged in, go to the <b>GAMES</b> tab and select a game to play</li>
+          <li>On any of the two games provided, you can select your bet by clicking the popup list</li>
+          <li>The two available games are straight-forward and self-explanatory</li>
+          <li>To test the <b>SignalR</b> functionality, go to the <b>BOARDS</b> section and create a new board</li>
+          <li>If you have another instance of the app opened on another browser, the newly created board will be listed there as well in real-time. If the board is updated or deleted by the owner, it will be updated on both clients</li>
+          <li>Open a board and click the <b>Chat Bubble</b> icon. This will open the board and connected users can start chatting in real-time. Hyperlinks are supported on the chat messages</li>
+          <li>The rest of the application features like <b>MENU</b> and <b>SEARCH</b> are self-explanatory.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <h3>Final Notes</h3>
+    <p>That's it! Enjoy the app and I hope that I have fulfilled all the requirements of this tech exam</p>
+  </li>
 </ol>
