@@ -1,13 +1,13 @@
 # DemoApp
 
-<p><h2>Description:</h2>&nbsp;&nbsp;&nbsp;Demo app developed for Play N Go to demonstrate my coding capabilities.</p>
+<p><h2>Description:</h2>Demo app developed for Play N Go to demonstrate my coding capabilities.</p>
 
 <h2>Tech Stack:</h2>
-&nbsp;&nbsp;&nbsp;Front-end:
+Front-end:
 <ul>
   <li><strong>Ionic/Angular</strong></li>
 </ul>
-&nbsp;&nbsp;&nbsp;Back-end:
+Back-end:
 <ul>
   <li><strong>ASP.NET Core 2.1</strong></li>
   <li><strong>MS SQL Server</strong></li>
@@ -41,14 +41,26 @@
 <ol>
   <li>
     <h3>Back End</h3>
-    <ul>
-      <li>Using MS SQL Server Studio and create a new DB instance. Enter a <b>Server Name</b> e.g. CODETRIBE and set <b>Authentication</b> to <b>Windows Authentication</b></li>
-      <li>Then, on the Object Explorer panel, right click the <b>Databases</b> folder and select <b>New Database</b></li>
-      <li>Create a database named <b>omnidb</b> and note down the connection settings</li>
-      <li>Open the project folder <b>DemoApp/resources/</b> and open the SQL files using a text editor</li>
-      <li>Create the tables by executing the SQL statements on MS SQL Server Studio</li>
-      <li>Don't forget to run the <b>INSERT</b> statements as well to create the table data</li>
-    </ul
+    <ol>
+      <li>
+        <h4>Create the database</h4>
+        <ul>
+          <li>Using MS SQL Server Studio and create a new DB instance. Enter a <b>Server Name</b> e.g. CODETRIBE and set <b>Authentication</b> to <b>Windows Authentication</b></li>
+          <li>Then, on the Object Explorer panel, right click the <b>Databases</b> folder and select <b>New Database</b></li>
+          <li>Create a database named <b>omnidb</b> and note down the connection settings</li>
+          <li>Open the project folder <b>DemoApp/resources/</b> and open the SQL files using a text editor</li>
+          <li>Create the tables by executing the SQL statements on MS SQL Server Studio</li>
+          <li>Don't forget to run the <b>INSERT</b> statements as well to create the table data</li>
+        </ul>
+      </li>
+      <li>
+        <h4>Run the Server</h4>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+    </ol>
   </li>
   <li><h3>Back End</h3></li>
 </ol>
