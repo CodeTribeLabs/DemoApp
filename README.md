@@ -47,7 +47,7 @@ Back-end:
       <li>
         <h4>Create the database</h4>
         <ul>
-          <li>Using MS SQL Server Studio and create a new DB instance. Enter a <b>Server Name</b> e.g. CODETRIBE and set <b>Authentication</b> to <b>Windows Authentication</b></li>
+          <li>Using MS SQL Server Studio, create a new DB instance. Enter a <b>Server Name</b> e.g. CODETRIBE and set <b>Authentication</b> to <b>Windows Authentication</b></li>
           <li>Then, on the Object Explorer panel, right click the <b>Databases</b> folder and select <b>New Database</b></li>
           <li>Create a database named <b>omnidb</b> and note down the connection settings</li>
           <li>Open the project folder <b>DemoApp/resources/</b> and open the SQL files using a text editor</li>
@@ -62,7 +62,7 @@ Back-end:
           <li>Open the file <b>DemoApp/DemoServer/DemoServer/appsettings.json</b></li>
           <li>Update the node <b>LocalDbConnectionString</b> and enter the <b>Server Name</b> and <b>Database Name</b> of the DB instance that you have created on the previous step</li>
           <li>By default, the server will run on port <b>52162</b>. If you want to change it, just modify the file <b>DemoApp/DemoServer/DemoServer/Properties/launchSettings.json</b>. If you do, please take note of the port number as you will need to configure this on the front-end app as well</li>
-          <li>Run the server locally by clicking the <b>IIS Express</b> green button below the menu bar. When the server is ready, it will open your default browser and will navigate to the its default URL e.g. <b>http://localhost:52162/api/values</b>. Please note this down as you will need to configure it on the front-end app</li>
+          <li>Run the server locally by clicking the <b>IIS Express</b> green button below the menu bar. When the server is ready, it will launch your default browser and will navigate to its endpoint URL e.g. <b>http://localhost:52162/api/values</b>. Please note this down as you will need to configure it on the front-end app</li>
         </ul>
       </li>
     </ol>
@@ -75,7 +75,7 @@ Back-end:
         <ul>
           <li>Open the project folder <b>DemoApp/demoapp/</b> using Visual Studio Code or your favorite Angular IDE</li>
           <li>Open the file <b>DemoApp/demoapp/src/providers/web-service/web-service.ts</b></li>
-          <li>Go to <b>Line #6</b> and make sure that the endpoint URL and port number matches the <b>Local Server URL</b> (see Run the Local Server section for details) e.g. <b>http://localhost:52162/</b></li>
+          <li>Go to <b>Line #6</b> and make sure that the endpoint <b>API_URL</b> and port number matches the <b>Local Server URL</b> (see Run the Local Server section for details) e.g. <b>http://localhost:52162/</b></li>
         </ul>
       </li>
       <li>
